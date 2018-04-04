@@ -211,8 +211,8 @@ header {
 	margin: 0 18px;
 	padding: 13px 50px;
 	font-size: 12px;
-	background-color:#315F84;
 	color:white;
+	background-color:transparent;
 	font-weight: 500;
 	border-width:1.5px;
 	border-color:white;
@@ -221,8 +221,8 @@ header {
 
 .btn:hover {
 	background-color: white;
-	color:black;
 	font-weight: 500;
+	color:black;
 }
 
 .more-on-summit {
