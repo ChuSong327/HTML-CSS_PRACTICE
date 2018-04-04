@@ -265,6 +265,7 @@ header {
 .report {
 	padding: 120px 0px 110px 40px;
 	background-image: url("GoldmanSachs.jpg");
+	background-size: 100%;
 	color: white;
 }
 
