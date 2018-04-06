@@ -1,0 +1,15 @@
+{
+  "name": "nununails",
+  "version": "1.0.0",
+  "description": "Loading page for nununails",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "author": "Chu",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,193 @@
+/*
+color gradient:
+#FCE1E5;
+#FCEBE1
+*/
+/* Note:
+To make the webpage as responsive as possible, better use % for height and width */
+/* universal selector to select all elements on the page */
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:"Lato",sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.7;
+  color: #777;
+  /* Add a white space around the entire body to make it look more decent.*/
+  padding: 30px;
+}
+@keyframes moveInLeft{
+  0% {
+    opacity: 0;
+    transform:translateX(-100px);
+  }
+
+  75% {
+      transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transition: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity:0;
+    transform: translateX(100px);
+  }
+  75% {
+    transform: translate(-10px);
+  }
+  100% {
+    opacity:1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity:0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  /* the percentage of the viewport height */
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(99,88,90,0.2),
+    rgba(99,92,88,0.2)),
+    url("../image/hero.jpeg");
+  background-size: cover;
+  /* the image center will remain the same as the window size change */
+  background-position: center;
+  position: relative;
+  /* clip-path: crop the image
+  polygon():the coordinates responds to the corner of the image, with the top left as the origin point.*/
+  /* clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */
+}
+
+.text-box {
+  clear:both;
+  position:absolute;
+  top:300px;
+  left: 50%;
+  /* with -50% -50% the box will be placed in the center */
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 40px;
+  font-weight:900;
+  letter-spacing: 30px;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 15px;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+}
+
+
+.primary-nav {
+  right: 8%;
+  top:5%;
+  position: absolute;
+}
+
+.nav {
+  display:inline-block;
+  list-style: none;
+  color: white;
+  padding-left:20px;
+  padding-right: 20px;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.nav-whats-new,
+.nav-shop,
+.nav-sale {
+  border-bottom: 2px black;
+  text-decoration: none;
+  color:inherit;
+}
+
+.btn-animated {
+  animation: moveUp .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform:translateY(-3px);
+  /* 4 values refer to: x y blur color*/
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
+}
+
+.btn::after {
+  content:"";
+  display:inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
