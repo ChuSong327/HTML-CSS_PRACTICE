@@ -4,7 +4,7 @@
   "description": "Loading page for nununails",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/main.css"
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
   },
   "author": "Chu",
   "license": "ISC",
