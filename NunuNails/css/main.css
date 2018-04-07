@@ -6,29 +6,6 @@ color gradient:
 /* Note:
 To make the webpage as responsive as possible, better use % for height and width */
 /* universal selector to select all elements on the page */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  /* change the default font-size from 16px to 10px
-   * so that 1rem now exactly equals 10px;
-  */
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato",sans-serif;
-  font-weight: 400;
-  /* font-size:16px; */
-  line-height: 1.7;
-  color: #777;
-  /* Add a white space around the entire body to make it look more decent.*/
-  padding: 3rem;
-  box-sizing: border-box; }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -57,29 +34,27 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.header {
-  /* the percentage of the viewport height */
-  height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(99, 88, 90, 0.2), rgba(99, 92, 88, 0.2)), url("../image/hero.jpeg");
-  background-size: cover;
-  /* the image center will remain the same as the window size change */
-  background-position: center;
-  position: relative;
-  /* clip-path: crop the image
-   * polygon():the coordinates responds to the corner of the image, with the top left as the origin point.
-   * clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */ }
-  .header__text-box {
-    clear: both;
-    position: absolute;
-    top: 30rem;
-    left: 50%;
-    /* with -50% -50% the box will be placed in the center */
-    transform: translate(-50%, -50%);
-    text-align: center; }
-  .header__primary-nav {
-    right: 8%;
-    top: 5%;
-    position: absolute; }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  /* font-size:16px; */
+  line-height: 1.7;
+  color: #777;
+  /* Add a white space around the entire body to make it look more decent.*/
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
@@ -100,19 +75,6 @@ body {
     letter-spacing: 1.5rem;
     animation-name: moveInRight;
     animation-duration: 2s; }
-
-.nav {
-  display: inline-block;
-  list-style: none;
-  color: white;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  letter-spacing: 0.3rem;
-  font-size: 1.3rem; }
-  .nav--whats-new, .nav--shop, .nav--sale {
-    border-bottom: 0.2rem black;
-    text-decoration: none;
-    color: inherit; }
 
 .btn--animated {
   animation: moveUp .5s ease-out .75s;
@@ -157,3 +119,40 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
+
+.header {
+  /* the percentage of the viewport height */
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(99, 88, 90, 0.2), rgba(99, 92, 88, 0.2)), url("../image/hero.jpeg");
+  background-size: cover;
+  /* the image center will remain the same as the window size change */
+  background-position: center;
+  position: relative;
+  /* clip-path: crop the image
+   * polygon():the coordinates responds to the corner of the image, with the top left as the origin point.
+   * clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */ }
+  .header__text-box {
+    clear: both;
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    /* with -50% -50% the box will be placed in the center */
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header__primary-nav {
+    right: 8%;
+    top: 5%;
+    position: absolute; }
+
+.nav {
+  display: inline-block;
+  list-style: none;
+  color: #fff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.3rem; }
+  .nav--whats-new, .nav--shop, .nav--sale {
+    border-bottom: 0.2rem black;
+    text-decoration: none;
+    color: inherit; }
