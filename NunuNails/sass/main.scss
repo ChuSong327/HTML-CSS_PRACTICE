@@ -1,80 +1,204 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+color gradient:
+#FCE1E5;
+#FCEBE1
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/*============================
-  navigation
-============================*/
-@import "node_modules/bootstrap/scss/bootstrap"
-
+/* Note:
+To make the webpage as responsive as possible, better use % for height and width */
+/* universal selector to select all elements on the page */
 *,
-*:before,
-*:after {
+*::after,
+*::before {
   margin:0;
   padding:0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-header {
-  height: 70px;
+html {
+  /* change the default font-size from 16px to 10px
+   * so that 1rem now exactly equals 10px;
+  */
+  font-size: 62.5%;
+}
 
-  .title {
-    float:left;
-    width: auto;
-    padding-left: 40px;
-    padding-top: 15px;
-    font-size:40px;
+body {
+  font-family:"Lato",sans-serif;
+  font-weight:400;
+  /* font-size:16px; */
+  line-height:1.7;
+  color: #777;
+  /* Add a white space around the entire body to make it look more decent.*/
+  padding: 3rem;
+  box-sizing: border-box;
+}
+@keyframes moveInLeft{
+  0% {
+    opacity: 0;
+    transform:translateX(-10rem);
   }
 
-  .side-nav {
-    float:right;
-    .nav-button {
-        list-style: none;
-        text-decoration: none;
-    }
+  75% {
+      transform: translateX(1rem);
   }
+
+  100% {
+    opacity: 1;
+    transition: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity:0;
+    transform: translateX(10rem);
+  }
+  75% {
+    transform: translate(-1rem);
+  }
+  100% {
+    opacity:1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity:0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  /* the percentage of the viewport height */
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(99,88,90,0.2),
+    rgba(99,92,88,0.2)),
+    url("../image/hero.jpeg");
+  background-size: cover;
+  /* the image center will remain the same as the window size change */
+  background-position: center;
+  position: relative;
+  /* clip-path: crop the image
+  polygon():the coordinates responds to the corner of the image, with the top left as the origin point.*/
+  /* clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */
+}
+
+.header__text-box {
+  clear:both;
+  position:absolute;
+  top:30rem;
+  left: 50%;
+  /* with -50% -50% the box will be placed in the center */
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 4rem;
+  font-weight:900;
+  letter-spacing: 3rem;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1.5rem;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+}
+
+
+.primary-nav {
+  right: 8%;
+  top:5%;
+  position: absolute;
+}
+
+.nav {
+  display:inline-block;
+  list-style: none;
+  color: white;
+  padding-left:2rem;
+  padding-right: 2rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.3rem;
+}
+
+.nav--whats-new,
+.nav--shop,
+.nav--sale {
+  border-bottom: 0.2rem black;
+  text-decoration: none;
+  color:inherit;
+}
+
+.btn--animated {
+  animation: moveUp .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  transform:translateY(-0.3rem);
+  /* 4 values refer to: x y blur color*/
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn--white {
+  background-color: white;
+  color: #777;
+}
+
+.btn::after {
+  content:"";
+  display:inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
