@@ -1,0 +1,29 @@
+.footer {
+  border-top: 1px solid;
+  padding: 8rem 0;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: $color-black;
+  background-color: $color-orange-light-1;
+
+  &__list {
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    padding: 2% 20%;
+  }
+
+  &__link {
+    text-decoration: none;
+    color:inherit;
+  }
+
+  &__subscription {
+    font-weight: 300;
+    font-size: 3rem;
+  }
+}

@@ -1,5 +1,5 @@
 
-.nav {
+.primary-nav {
   display:inline-block;
   list-style: none;
   color: $color-white;
@@ -7,11 +7,9 @@
   padding-right: 2rem;
   letter-spacing: 0.3rem;
   font-size: 1.3rem;
+  text-transform: uppercase;;
 
-  &--whats-new,
-  &--shop,
-  &--sale {
-    border-bottom: 0.2rem black;
+  &__link {
     text-decoration: none;
     color:inherit;
   }
