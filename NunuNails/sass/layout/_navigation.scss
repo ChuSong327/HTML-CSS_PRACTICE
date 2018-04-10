@@ -5,8 +5,28 @@
   color: $color-white;
   font-weight: 700;
 
+
   &__item {
-      @include navigation-style;
+    position: relative;
+    @include navigation-style;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 0;
+      height:2px;
+      bottom:0;
+      left:0;
+      background-color:$color-white;
+      transition: width .3s;
+    }
+
+    &:hover {
+      &::after {
+        width:100%;
+      }
+    }
   }
 
   &__link {
@@ -23,7 +43,26 @@
   color: $color-grey-dark;
 
   &__item {
+    position: relative;
     @include navigation-style;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 0;
+      height:2px;
+      bottom:0;
+      left:0;
+      background-color:$color-black;
+      transition: width .3s;
+    }
+
+    &:hover {
+      &::after {
+        width:100%;
+      }
+    }
   }
 
   &__link {

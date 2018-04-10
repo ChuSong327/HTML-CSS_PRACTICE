@@ -9,8 +9,10 @@
 @mixin navigation-style {
   display:inline-block;
   list-style: none;
-  padding-left:2rem;
-  padding-right: 2rem;
+  padding-left:2px;
+  padding-right: 2px;
+  margin-left: 2rem;
+  margin-right: 2rem;
   letter-spacing: 0.2rem;
   font-size: 1.3rem;
   text-transform: uppercase;
