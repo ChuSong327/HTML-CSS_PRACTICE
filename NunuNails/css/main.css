@@ -99,6 +99,25 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.heading__cover {
+  color: #301a1a;
+  text-transform: capitalize; }
+  .heading__cover--main {
+    display: block;
+    background-image: linear-gradient(to right, black, #736a6a, black);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem; }
+  .heading__cover--sub {
+    display: block;
+    color: #301a1a;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px; }
+
 .u-text-center {
   text-align: center; }
 
@@ -193,7 +212,7 @@ body {
 .image-box {
   padding: 0.1rem; }
 
-.header {
+.header-home {
   /* the percentage of the viewport height */
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(237, 164, 104, 0.3), rgba(250, 161, 184, 0.3)), url("../image/hero.jpeg");
@@ -204,7 +223,7 @@ body {
   /* clip-path: crop the image
    * polygon():the coordinates responds to the corner of the image, with the top left as the origin point.
    * clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */ }
-  .header__text-box {
+  .header-home__text-box {
     clear: both;
     position: absolute;
     top: 50%;
@@ -212,21 +231,59 @@ body {
     /* with -50% -50% the box will be placed in the center */
     transform: translate(-50%, -50%);
     text-align: center; }
-  .header__primary-nav {
-    right: 8%;
-    top: 5%;
-    position: absolute; }
 
-.primary-nav {
-  display: inline-block;
-  list-style: none;
+.header-main {
+  height: 8vh;
+  position: relative; }
+
+.nav-home {
+  right: 8%;
+  top: 5%;
+  position: absolute;
   color: #fff;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  letter-spacing: 0.3rem;
-  font-size: 1.3rem;
-  text-transform: uppercase; }
-  .primary-nav__link {
+  font-weight: 700; }
+  .nav-home__item {
+    display: inline-block;
+    list-style: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase; }
+  .nav-home__link {
+    text-decoration: none;
+    color: inherit; }
+
+.nav-main {
+  float: right;
+  position: absolute;
+  right: 13%;
+  top: 25%;
+  color: #301a1a; }
+  .nav-main__item {
+    display: inline-block;
+    list-style: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase; }
+  .nav-main__link {
+    text-decoration: none;
+    color: inherit; }
+
+.nav-heading {
+  left: 7%;
+  top: 2%;
+  position: absolute;
+  display: inline-block;
+  float: left;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #301a1a; }
+  .nav-heading__link {
     text-decoration: none;
     color: inherit; }
 
@@ -275,6 +332,36 @@ body {
   .footer__subscription {
     font-weight: 300;
     font-size: 3rem; }
+
+.cover {
+  margin: 2rem 0;
+  height: 40rem;
+  position: relative; }
+  .cover__text-box {
+    clear: both;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* with -50% -50% the box will be placed in the center */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 4rem 6rem 5rem 6rem; }
+
+.cover--press-on {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)), url("../image/hero2.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.cover--glue-on {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)), url("../image/hero3.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.cover--nude {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)), url("../image/hero4.jpg");
+  background-size: cover;
+  background-position: center; }
 
 .section-about--color {
   background-color: rgba(237, 164, 104, 0.13);

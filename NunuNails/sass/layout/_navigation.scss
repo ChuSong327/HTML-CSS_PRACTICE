@@ -1,13 +1,48 @@
-
-.primary-nav {
-  display:inline-block;
-  list-style: none;
+.nav-home {
+  right: 8%;
+  top:5%;
+  position: absolute;
   color: $color-white;
-  padding-left:2rem;
-  padding-right: 2rem;
-  letter-spacing: 0.3rem;
-  font-size: 1.3rem;
-  text-transform: uppercase;;
+  font-weight: 700;
+
+  &__item {
+      @include navigation-style;
+  }
+
+  &__link {
+    text-decoration: none;
+    color:inherit;
+  }
+}
+
+.nav-main {
+  float:right;
+  position:absolute;
+  right: 13%;
+  top: 25%;
+  color: $color-grey-dark;
+
+  &__item {
+    @include navigation-style;
+  }
+
+  &__link {
+    text-decoration: none;
+    color:inherit;
+  }
+}
+
+.nav-heading {
+  left: 7%;
+  top: 2%;
+  position: absolute;
+  display:inline-block;
+  float:left;
+  font-size: 1.9rem;
+  font-weight:700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-grey-dark;
 
   &__link {
     text-decoration: none;

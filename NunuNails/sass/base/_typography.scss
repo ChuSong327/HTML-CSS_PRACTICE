@@ -63,3 +63,28 @@ body {
     margin-bottom: 3rem;
   }
 }
+
+
+.heading__cover {
+  color:$color-grey-dark;
+  text-transform: capitalize;
+
+  &--main {
+    display: block;
+    background-image: linear-gradient(to right,$color-black,$color-grey-light,$color-black);
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  &--sub {
+    display: block;
+    color:$color-grey-dark;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+}

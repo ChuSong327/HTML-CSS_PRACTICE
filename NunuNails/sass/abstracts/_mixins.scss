@@ -5,3 +5,23 @@
     clear: both;
   }
 }
+
+@mixin navigation-style {
+  display:inline-block;
+  list-style: none;
+  padding-left:2rem;
+  padding-right: 2rem;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+@mixin text-box-style {
+  clear:both;
+  position:absolute;
+  top:50%;
+  left: 50%;
+  /* with -50% -50% the box will be placed in the center */
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
