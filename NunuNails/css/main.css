@@ -130,6 +130,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .btn--animated {
   animation: moveUp .5s ease-out .75s;
   animation-fill-mode: backwards; }
@@ -356,7 +359,7 @@ body {
     text-decoration: none;
     color: inherit; }
 
-.nav-heading {
+.nav-brand-name {
   left: 7%;
   top: 2%;
   position: absolute;
@@ -367,7 +370,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #301a1a; }
-  .nav-heading__link {
+  .nav-brand-name__link {
     text-decoration: none;
     color: inherit; }
 
@@ -467,7 +470,7 @@ body {
 
 .section-about--color {
   background-color: rgba(237, 164, 104, 0.13);
-  padding: 15rem 0; }
+  padding: 13rem 0; }
 
 .section-about {
-  padding: 15rem 0; }
+  padding: 13rem 0; }
