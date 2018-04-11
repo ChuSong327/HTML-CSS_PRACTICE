@@ -190,6 +190,13 @@ body {
 .btn-text:active {
   transform: translateY(0); }
 
+.btn-brown:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn-brown:active {
+  transform: translateY(0); }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -250,6 +257,18 @@ body {
   float: left;
   background-color: rgba(160, 82, 45, 0.3);
   border-radius: 2px; }
+
+.icon__list {
+  list-style: none; }
+
+.icon__item {
+  display: inline-block;
+  margin: 0 0.5rem; }
+
+.icon__image {
+  height: 3rem;
+  width: 3rem;
+  filter: opacity(0.6); }
 
 .header-home {
   /* the percentage of the viewport height */
@@ -399,12 +418,22 @@ body {
   .footer__link {
     text-decoration: none;
     color: inherit; }
-  .footer__title {
+  .footer__title--subscription {
     font-weight: 100;
     font-size: 3.5rem;
     color: black;
     text-transform: capitalize;
     text-align: left; }
+  .footer__title--social {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #301a1a;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 2.5rem; }
+  .footer__icon {
+    padding-left: 11rem; }
 
 .cover {
   margin: 2rem 0;
