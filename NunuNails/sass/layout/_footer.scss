@@ -1,29 +1,41 @@
 .footer {
   border-top: 1px solid;
   padding: 8rem 0;
-
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  color: $color-black;
   background-color: $color-orange-light-1;
 
   &__list {
     list-style: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: $color-black;
     text-transform: uppercase;
+    padding: 0 0;
   }
 
   &__item {
-    padding: 2% 20%;
+    padding: 2% 15%;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
   }
 
   &__link {
     text-decoration: none;
     color:inherit;
+
   }
 
-  &__subscription {
-    font-weight: 300;
-    font-size: 3rem;
+  &__title {
+    font-weight:100;
+    font-size: 3.5rem;
+    color: $color-black;
+    text-transform: capitalize;
+    text-align: left;
   }
 }
